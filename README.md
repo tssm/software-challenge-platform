@@ -3,6 +3,7 @@ For this challenge, use one or more of the following languages:
 * Java
 * Scala
 * Python
+* Kotlin
 
 # Task
 
