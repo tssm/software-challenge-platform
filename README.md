@@ -72,5 +72,5 @@ Return: {“boundingBox”: [<x_l>, <y_l>, <z_l> ] , “center”: [<x>, <y>, <z
 - Use libraries of choice
 - Together with the solution there should be some way of running/testing it, e.g. a bash script that runs the api and sends some example data
 - No need for extensive testing and full unit test coverage
-- The completed task should be handed in as a Pull Request to this repo
+- To hand in the challenge, fork the repo and send an invitaion to one of us (contact us if you have not received who to invite)
 - Don’t hesitate asking follow-up questions
