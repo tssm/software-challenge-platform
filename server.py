@@ -1,3 +1,4 @@
+import threed
 import json
 import web
 
@@ -12,7 +13,16 @@ urls = ("/scans", "scans",
         "/scans/(\d+)/boundingbox", "boundingbox")
 
 class boundingbox:
-    def GET(self, id): return 'get boundingbox'
+    def GET(self, id):
+        try:
+            scan = db[id]
+            bbox = threed.boundingbox(scan)
+            center = threed.center(scan)
+            body = json.dumps({ 'boundingbox': bbox, 'center': center })
+            web.ok(self, headers = { 'Content-Type': 'application/json'})
+            return body
+        except KeyError:
+            web.notfound(self)
 
 class scan:
     def GET(self, id):
